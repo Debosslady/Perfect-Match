@@ -1,6 +1,6 @@
-import { Metadata } from 'next'  
-import FindaWife from './home-data'
+import { Metadata } from 'next'   
 import GuestLayout from '@/components/layouts/GuestLayout'
+import ContactUs from './contact-data'
 
 
 
@@ -14,7 +14,7 @@ export default function FirstMatch() {
   return (
     <GuestLayout >
       <div className="w-full">
-        < FindaWife/>
+        <ContactUs/>
       </div>
     </GuestLayout>
   )

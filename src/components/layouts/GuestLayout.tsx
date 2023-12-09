@@ -1,9 +1,7 @@
 'use client'
 import { LayoutProps } from '@/hooks/types';
 import { useEffect, useState } from 'react';
-import Loading from '@/app/loader';
-import ImageIcons from '@/components/ImageIcons';
-import Link from 'next/link';
+import Loading from '@/app/loader'; 
 import Navigation from './Navigation';
 import Footer from './Footer';
 

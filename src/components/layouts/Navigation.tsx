@@ -20,7 +20,7 @@ export default function Navigation(){
         <header>
             <div className="mb-1">
                 <nav className={`w-full fixed top-0 md:px-5 z-10 ${navbarBg}`}>
-                    <div className="justify-between mx-auto md:items-center md:flex py-3  md:container">
+                    <div className="justify-between mx-auto md:items-center md:flex mt-3  md:container">
                         <div>
                             <div className="flex items-center justify-between">
                                 <div className="md:hidden px-4">
@@ -37,7 +37,7 @@ export default function Navigation(){
                                 </div>
                                 
                                 <Link href="/" className={`md:px-0 md:pb-3 ${navbar ? 'hidden' : 'block'}`}>
-                                    <Image src="/images/Logo.svg" width={140} height={70} alt="logo" className="logo" priority={true}/>
+                                    <Image src="/images/Logo.svg" width={140} height={70} alt="logo" className="logo mt-4" priority={true}/>
                                 </Link>
 
                                 <div className="md:hidden px-4">
@@ -54,22 +54,31 @@ export default function Navigation(){
                                             <div  className={`pt-10  md:pt-0 pb-5 px-1 md:hidden ${navbar ? 'block':'hidden'}`}>
                                                 <Image src="/images/Logo.svg" width={140} height={70} alt="logo" className="logo" priority={false}/>
                                             </div>
-                                            <li className="pb-6 text-md text-black py-3">
-                                                <Link href="/" className="hover:text-blue-700 text-black md:px-8 font-bold">
+                                            <li className="pb-6 text-md text-black mt-3">
+                                                <Link href="/" className="hover:text-blue-700 text-black md:px-4 font-bold">
                                                     Home
                                                 </Link>
                                             </li>
-                                            <li className="pb-6 text-md text-black py-3">
+                                            <li className="pb-6 text-md text-black mt-3">
                                                 <Link href="/how-it-works" className="hover:text-blue-700 text-black md:px-8 font-bold">
-                                                    How it works
+                                                    About
                                                 </Link>
                                             </li>
-                                            
-                                            <li className="pb-6 text-md text-black py-3">
+                                            <li className="pb-6 text-md text-black mt-3">
+                                                <Link href="/how-it-works" className="hover:text-blue-700 text-black md:px-8 font-bold">
+                                                    Services
+                                                </Link>
+                                            </li>
+                                            <li className="pb-6 text-md text-black mt-3">
+                                                <Link href="/how-it-works" className="hover:text-blue-700 text-black md:px-8 font-bold">
+                                                    Contact
+                                                </Link>
+                                            </li> 
+                                            {/* <li className="pb-6 text-md text-black mt-3">
                                                 <Link href="https://forms.gle/hFMKF9DvJ8brSHnc9" target="_blank" className="bg-[#0067FC] text-white px-4  rounded-[23px] py-2 hover:text-[#0067FC] border border-[#0067FC] hover:bg-white">
                                                     Get Started
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                 </div>
