@@ -27,11 +27,12 @@ export default function ContactUs(){
     
 
     const [errors, setErrors] = useState<contactErrorType>({
-        msg: '',
-        name: [], 
-        phone_number: [],
-        email: [], 
-        message: []
+        msg:'',
+        name: '', 
+        phone_number: '',
+        email: '',
+        title: '', 
+        message: '',
     }); 
 
     const [status, setStatus] = useState(0) 
@@ -46,35 +47,15 @@ export default function ContactUs(){
         }
         setErrors({
             msg: '',
-            name: [], 
-            phone_number: [],
-            email: [], 
-            message: 
+            name: '', 
+            phone_number: '',
+            email: '',
+            title: '', 
+            message:'', 
         });
-        try {
-            const personalInfo = await getContactInfoMethod({
-                name, 
-                phone_number,
-                email,
-                message, 
-                sourceData,
-                setErrors,
-                setStatus,
-                setData
-            });
-        } catch (error) {
-            // console.error('Error:', error);
-            setProcessing(false);
-        }
+        
     }
- 
-    
-    function setUserType(selectedOptionValue: string): void {
-        throw new Error("Function not implemented.");
-    }
-
-
-
+  
     return(
         <div className="md:flex px-3 md:mx-12 pb-5"> 
             <div className="flex-none w-[100%] md:w-[46%]  px-3 md:px-0">
@@ -106,15 +87,26 @@ export default function ContactUs(){
                             <div className="text-red-500">{errors.email}</div>
                         </div>
                         <div className="form-group mt-4">
-                            <Label htmlFor="phoneNumber">Phone Number</Label>
+                            <Label htmlFor="phone_number">Phone Number</Label>
                             <Input
-                                id="phoneNumber"
+                                id="phone_number"
                                 type="tel"
                                 value={phone_number}
                                 className={`block mt-1 w-full px-3 ${errors.phone_number.length > 0 ? 'border-red-500' : ''}`}
                                 onChange={(event: { target: { value: SetStateAction<string>; }; }) => setPhoneNumber(event.target.value)}
                             /> 
                             <div className="text-red-500">{errors.phone_number}</div>
+                        </div> 
+                        <div className="form-group mt-4">
+                            <Label htmlFor="title">Phone Number</Label>
+                            <Input
+                                id="title"
+                                type="tel"
+                                value={title}
+                                className={`block mt-1 w-full px-3 ${errors.title.length > 0 ? 'border-red-500' : ''}`}
+                                onChange={(event: { target: { value: SetStateAction<string>; }; }) => setTitle(event.target.value)}
+                            /> 
+                            <div className="text-red-500">{errors.title}</div>
                         </div>  
                         <div className="form-group mt-4">
                             <Label htmlFor="message">Date of Birth</Label>
